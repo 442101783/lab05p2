@@ -1,0 +1,11 @@
+{% extends "app/layout.html" %}
+{% block body %}
+  <h1> The list of registered names</h1>
+  <ul>
+    {% for name in people %}
+       <li>{{ name.name }}</li>
+    {% endfor %}    
+  </ul>
+  <a href="{% url 'add' %}">Add a New Name</a>
+
+{% endblock %}

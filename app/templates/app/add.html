@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+
+{% block body %}
+    <h1> Add your name and password</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+        <input type="text" name = "name">
+        <input type="password" name = "password">
+        <input type="submit">
+         </div>
+    </form>
+    <a href="{% url 'index' %}">View names</a>
+
+{% endblock %}    
+   
